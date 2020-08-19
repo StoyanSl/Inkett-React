@@ -1,0 +1,22 @@
+﻿@model ProfileTattoosViewModel
+
+<div class="container" style="padding-right:135px">
+    <partial name="_ProfilePartial" model="Model.Profile" />
+    <div class="container" style="margin-top:30px; padding:0">
+        <div class="col-md-12 bg-white" style="border-radius: 40px;">
+            <h1 class="m-1">Liked Tattoos</h1>
+            <div class="row">
+                @if (Model.Tattoos.Count == 0)
+                {
+
+                    <h1 class="px-4"> You have not liked any tattoos.</h1>
+                }
+                else
+                {
+                    <partial name="_ListedTattoosContainer" model="Model.Tattoos" />
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
